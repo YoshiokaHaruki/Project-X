@@ -1,10 +1,4 @@
 <?php
-/*
-$n = 7185512;
-echo $n;
-if($n & (1<<3))
-  echo "<br>yes";
-*/
 require_once('php/config.php');
 require_once('php/funcs.php');
 
@@ -27,9 +21,11 @@ $data = loadFromTable("zp_weapon_system", "6");
     </div>
     <div class="collection">
       <h1>Коллекция</h1>
-      <?php foreach ($data as $player) { ?>
-
-      <?php } ?>
+      <?php foreach ($data as $player) {
+        for($i = 0; $i < count($bitItems); $i++) {
+          echo $bitItems[$i][1], "<br />";
+        }
+      } ?>
     </div>
   </body>
 </html>

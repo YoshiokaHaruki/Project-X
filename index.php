@@ -23,7 +23,13 @@ $data = loadFromTable("zp_weapon_system", "6");
       <h1>Коллекция</h1>
       <?php foreach ($data as $player) {
         for($i = 0; $i < count($bitItems); $i++) {
-          echo $bitItems[$i][1], "<br />";
+          $classitem = "item_locked";
+          if($bitItems[$i][0] == -1 || $bitItems[$i][0] != -1 && $player->bitsum & 1<<$bitItems[$i][0])
+            $classitem = "item_unlocked";
+
+          echo "<div class='$classitem'>";
+            echo "<img style='max-height: 25px;' src='images/items/".$bitItems[$i][3]."' alt='wpn' />", $bitItems[$i][1], "<br />";
+          echo "</div>";
         }
       } ?>
     </div>

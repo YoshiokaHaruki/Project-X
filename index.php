@@ -2,7 +2,7 @@
 require_once('php/config.php');
 require_once('php/funcs.php');
 
-$data = loadFromTable("zp_weapon_system", "6");
+$data = loadFromTable("zp_weapon_system", $_GET['id']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@ $data = loadFromTable("zp_weapon_system", "6");
       <?php foreach ($data as $player) {
         for($i = 0; $i < count($bitItems); $i++) {
           $classitem = "item_locked";
-          if($bitItems[$i][0] == -1 || $bitItems[$i][0] != -1 && $player->bitsum & 1<<$bitItems[$i][0])
+          if($bitItems[$i][2] == -1 || $bitItems[$i][2] != -1 && $player->bitsum & 1<<$bitItems[$i][2])
             $classitem = "item_unlocked";
 
           echo "<div class='$classitem'>";

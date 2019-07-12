@@ -34,22 +34,36 @@ function loadFromTable($sql_table, $searchId = "id", $searchWord = "") {
 }
 
 $bitItems = array(
-  // bitsum, itemname, sysname, image
-  array("-1", "Seal Knife", "KNIFE", "Sealknife.png"),
-  array("-1", "Граната Напалм", "NAPALM", "Napalm.png"),
-  array("-1", "Граната Заморозка", "FROST", "Frost.png"),
-  array("-1", "Infinity Black", "INFINITYBLACK", "Infinity_black_icon.png"),
-  array("-1", "Winchester M1887", "M1887", "Icon_m1887_cso.png"),
-  array("-1", "USAS-12 Camo", "USAS12", "Usas12camo.png"),
-  array("0", "JANUS-11", "JANUS11", "Janus11.png"),
-  array("1", "Coil Gun", "COILGUN", "Coilmg.png"),
-  array("-1", "HK-416", "HK416", "M4a1hk416.png"),
-  array("-1", "StG 44", "STG44", "Stg44.png"),
-  array("1", "Brick Piece V2", "BLOCKAR", "Blockar_gfx.png"),
-  array("0", "JANUS-5", "JANUS5", "Janus-5.png"),
-  array("3", "Plasma Gun", "PLASMAGUN", "Plasma.png"),
-  array("-1", "VSK-94 Auto-Sniper", "VSK94", "Vsk94.png"),
-  array("5", "M95 White Tiger", "M95TIGER", "Buffm95.png"),
-  array("6", "Святая граната", "HOLYBOMB", "Holybomb.png"),
-  array("7", "Dread Nova", "DREADNOVA", "Dreadnova.png")
+  // sysname, itemname, bitsum, image
+  array("KNIFE", "Seal knife", "-1", "Sealknife.png"),
+  array("NAPALM", "Граната Напалм", "-1", "Napalm.png"),
+  array("FROST", "Граната Заморозка", "-1", "Frost.png"),
+  array("INFINITYBLACK", "Infinity Black", "-1", "Infinity_black_icon.png"),
+  array("M1887", "Winchester M1887", "-1", "Icon_m1887_cso.png"),
+  array("USAS12", "USAS-12 Camo", "-1",  "Usas12camo.png"),
+  array("JANUS11", "JANUS-11", "0", "Janus11.png"),
+  array("COILGUN", "Coil Gun", "1", "Coilmg.png"),
+  array("HK416", "HK-416", "-1", "M4a1hk416.png"),
+  array("STG44", "StG 44", "-1", "Stg44.png"),
+  array("BLOCKAR", "Brick Piece V2", "1", "Blockar_gfx.png"),
+  array("JANUS5", "JANUS-5", "0", "Janus-5.png"),
+  array("PLASMAGUN", "Plasma Gun", "3", "Plasma.png"),
+  array("VSK94", "VSK-94 Auto-Sniper", "-1", "Vsk94.png"),
+  array("M95TIGER", "M95 White Tiger", "5",  "Buffm95.png"),
+  array("HOLYBOMB", "Святая граната", "6", "Holybomb.png"),
+  array("DREADNOVA", "Dread Nova", "7", "Dreadnova.png")
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+

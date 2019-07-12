@@ -34,21 +34,22 @@ function loadFromTable($sql_table, $searchId = "id", $searchWord = "") {
 }
 
 $bitItems = array(
-  array("-1", "Seal Knife"),
-  array("-1", "Граната Напалм"),
-  array("-1", "Граната Заморозка"),
-  array("-1", "Infinity Black"),
-  array("-1", "Winchester M1887"),
-  array("-1", "USAS-12 Camo"),
-  array("0", "JANUS-XI"),
-  array("1", "Coil Gun"),
-  array("-1", "HK-416"),
-  array("-1", "StG 44"),
-  array("1", "Brick Piece V2"),
-  array("0", "JANUS-5"),
-  array("3", "Plasma Gun"),
-  array("-1", "VSK-94 Auto-Sniper"),
-  array("5", "M95 White Tiger"),
-  array("6", "Святая граната"),
-  array("7", "Dread Nova")
+  // bitsum, itemname, sysname, image
+  array("-1", "Seal Knife", "KNIFE", "Sealknife.png"),
+  array("-1", "Граната Напалм", "NAPALM", "Napalm.png"),
+  array("-1", "Граната Заморозка", "FROST", "Frost.png"),
+  array("-1", "Infinity Black", "INFINITYBLACK", "Infinity_black_icon.png"),
+  array("-1", "Winchester M1887", "M1887", "Icon_m1887_cso.png"),
+  array("-1", "USAS-12 Camo", "USAS12", "Usas12camo.png"),
+  array("0", "JANUS-11", "JANUS11", "Janus11.png"),
+  array("1", "Coil Gun", "COILGUN", "Coilmg.png"),
+  array("-1", "HK-416", "HK416", "M4a1hk416.png"),
+  array("-1", "StG 44", "STG44", "Stg44.png"),
+  array("1", "Brick Piece V2", "BLOCKAR", "Blockar_gfx.png"),
+  array("0", "JANUS-5", "JANUS5", "Janus-5.png"),
+  array("3", "Plasma Gun", "PLASMAGUN", "Plasma.png"),
+  array("-1", "VSK-94 Auto-Sniper", "VSK94", "Vsk94.png"),
+  array("5", "M95 White Tiger", "M95TIGER", "Buffm95.png"),
+  array("6", "Святая граната", "HOLYBOMB", "Holybomb.png"),
+  array("7", "Dread Nova", "DREADNOVA", "Dreadnova.png")
 );

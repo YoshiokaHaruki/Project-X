@@ -14,3 +14,13 @@ img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+
+.has_item {
+  color: #f6e58d;
+}
+
+h1 {
+  background-color: #202627;
+  margin: auto;
+  padding: 10px;
+}

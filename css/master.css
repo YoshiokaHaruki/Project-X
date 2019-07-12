@@ -10,16 +10,18 @@ img {
   filter: grayscale(0%);
 }
 
-.item_locket {
+.item_locked {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
-.has_item {
-  color: #f6e58d;
+.item_unlocked {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  color: #fdcb6e;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   background-color: #202627;
   margin: auto;
   padding: 10px;

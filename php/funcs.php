@@ -53,17 +53,3 @@ $bitItems = array(
   array("HOLYBOMB", "Святая граната", "6", "Holybomb.png"),
   array("DREADNOVA", "Dread Nova", "7", "Dreadnova.png")
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-

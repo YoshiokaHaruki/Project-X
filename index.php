@@ -2,7 +2,7 @@
 require_once('php/config.php');
 require_once('php/funcs.php');
 
-$data = loadFromTable("zp_weapon_system", $_GET['id']);
+$data = loadFromTable("zp_save_data", $_GET['id']);
 $player = $data[0];
 $steam_link = SteamID::st32to64($player->steamid);
 ?>
@@ -32,7 +32,7 @@ $steam_link = SteamID::st32to64($player->steamid);
                   <a href="https://steamcommunity.com/profiles/<?=$steam_link?>/" target="_blank" title="Steam профиль {name}">
                     <img src="<?=$avatar?>" alt="avatar" class="img-fluid rounded-circle" style="height: 128px; width: auto;"></a>
                 <?php } ?>
-                Статистика игрока {name}
+                Статистика игрока <?=$player->name?>
               </div>
             </div>
           </div>

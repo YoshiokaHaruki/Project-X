@@ -5,13 +5,13 @@ function loadFromTable($sql_table, $searchId = "id", $searchWord = "") {
   global $sql_connection;
   $searchWord = addslashes(stripslashes($searchWord));
 
-  if($sql_table == "zp_weapon_system") {
+  if($sql_table == "zp_save_data") {
     $sql_query = $sql_connection->prepare("
-      SELECT id, steamid, bitsum, slot1, slot2, slot3, slot4
+      SELECT id, steamid, name, zclass, value1, value2, bitsum, slot1, slot2, slot3, slot4
       FROM $sql_table
       WHERE (steamid LIKE '%$searchWord%')
       AND id = $searchId;");
-    $sql_query->bind_result($id, $steamid, $bitsum, $primary, $secondary, $melee, $equipment);
+    $sql_query->bind_result($id, $steamid, $name, $zclass, $value1, $value2, $bitsum, $primary, $secondary, $melee, $equipment);
     $sql_query->execute();
 
     $count = array();
@@ -20,6 +20,10 @@ function loadFromTable($sql_table, $searchId = "id", $searchWord = "") {
 
       $player->id = $id;
       $player->steamid = $steamid;
+      $player->name = $name;
+      $player->zclass = $zclass;
+      $player->value1 = $value1;
+      $player->value2 = $value2;
       $player->bitsum = $bitsum;
       $player->primary = $primary;
       $player->pistol = $secondary;

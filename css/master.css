@@ -23,8 +23,6 @@ img {
   color: #fdcb6e;
 }
 
-@media only screen and (max-width: 576px) { /* FOR MOBILE */
-  .collection table {
-    width: 100%;
-  }
+.table-stats tr td {
+  width: 50%;
 }

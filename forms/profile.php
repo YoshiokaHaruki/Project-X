@@ -9,7 +9,7 @@
         $avatar = $parsed_info->avatarfull;
       ?>
         <a href="https://steamcommunity.com/profiles/<?=$steam_link?>/" target="_blank" title="Steam профиль <?=$player->name?>">
-          <img src="<?=$avatar?>" alt="avatar" class="img-fluid rounded-circle" style="height: 128px; width: auto;"></a>
+          <img src="<?=$avatar?>" alt="avatar" class="img-fluid rounded-circle" style="height: 64px; width: 64px;"></a>
       <?php } ?>
       Статистика игрока <?=$player->name?>
     </div>

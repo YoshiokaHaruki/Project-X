@@ -144,3 +144,50 @@ function createProgressBar($percent) {
       aria-valuenow='$percent' aria-valuemin='0' aria-valuemax='100'>$percent%</div>
   </div>";
 }
+
+function drawAchievement($achivTitle, $achivText, $achivDate, $achivImage, $achivValue, $achivMax) {
+  $achiv_unlocked = false;
+  $progress = (int)(($achivValue / $achivMax) * 100);
+  if($achivValue < $achivMax) {
+    $class_locked = "achievement-locked";
+    $achiv_unlocked = false;
+  } else $achiv_unlocked = true;
+  ?>
+  <div class="achievement <?=$class_locked?>" style="padding: 10px 10px 10px 10px;">
+    <div class="media">
+      <?php if($achivImage != null) { ?>
+      <img src="<?=$achivImage?>" alt="achievement-image" style="width: 64px; height: 64px;">
+      <?php } ?>
+      <div class="media-body">
+        <div class="row">
+          <div class="col">
+            <h5><?=$achivTitle?></h5>
+          </div>
+          <?php if($achiv_unlocked == true) { ?>
+          <div class="col text-right" style="padding-top: 4px;">
+            <span style="font-size: 24px;"><i><?=$achivDate?></i></span>
+          </div>
+          <?php } ?>
+        </div>
+        <span><?=$achivText?></span>
+      </div>
+    </div>
+    <?php if($achivValue <= 0) { ?>
+      <div class="progress" style="margin: 10px 0 10px 0;">
+        <div class="progress-bar bg-secondary" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">0 / <?=$achivMax?></div>
+      </div>
+    <?php } else { ?>
+      <div class="progress" style="margin: 10px 0 10px 0;">
+        <?php if($progress >= 100) { ?>
+          <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?=$progress?>%;" aria-valuenow="<?=$progress?>" aria-valuemin="0" aria-valuemax="100"><?=$achivValue?> / <?=$achivMax?></div>
+        <?php } else if($progress >= 50) { ?>
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?=$progress?>%;" aria-valuenow="<?=$progress?>" aria-valuemin="0" aria-valuemax="100"><?=$achivValue?> / <?=$achivMax?></div>
+        <?php } else { ?>
+          <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?=$progress?>%;" aria-valuenow="<?=$progress?>" aria-valuemin="0" aria-valuemax="100"></div>
+          <span class="pl-2"><?=$achivValue?> / <?=$achivMax?></span>
+        <?php } ?>
+      </div>
+    <?php } ?>
+  </div>
+  <?php
+}

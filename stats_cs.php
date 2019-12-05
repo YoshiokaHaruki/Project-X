@@ -23,16 +23,16 @@ $steam_link = SteamID::st32to64($player->steamid);
           <?php require_once('forms/profile.php'); ?>
         </div>
       </div>
-      <!-- Коллекция -->
-      <div class="row">
-        <div class="col-sm-12" style="padding-bottom: 10px;">
-          <?php require_once('forms/collection.php'); ?>
-        </div>
-      </div>
       <!-- Достижения -->
       <div class="row">
         <div class="col-sm-12" style="padding-bottom: 10px;">
           <?php require_once('forms/achievments.php'); ?>
+        </div>
+      </div>
+      <!-- Коллекция -->
+      <div class="row">
+        <div class="col-sm-12" style="padding-bottom: 10px;">
+          <?php require_once('forms/collection.php'); ?>
         </div>
       </div>
     </div>

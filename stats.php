@@ -2,7 +2,7 @@
 require_once('php/config.php');
 require_once('php/funcs.php');
 
-$data = loadFromTable("zp_save_data", $_GET['id']);
+$data = loadStats($_GET['id']);
 $player = $data[0];
 $steam_link = SteamID::st32to64($player->steamid);
 ?>

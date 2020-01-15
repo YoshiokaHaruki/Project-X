@@ -23,6 +23,7 @@ img {
 
 .achievement {
   background-color: rgba(69, 69, 69, 0.5);
+  padding: 10px 10px 10px 10px;
   margin-bottom: 4px;
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) calc(0.25rem - 1px) calc(0.25rem - 1px);
 }

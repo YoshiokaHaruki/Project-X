@@ -68,7 +68,7 @@
           echo addTableLine("Онлайн на сервере:", $online_time);
           echo addProgressToRow("Эффективность:", $eff);
           echo addTableLine("Денег/Аммо:", $player->value1);
-          echo addTableLine("Нанёс урона:", number_format($player->damage, 2, '.', ''));
+          echo addTableLine("Нанёс урона:", number_format($player->damage, 0, '', ' '));
           ?>
         </table>
       </div>

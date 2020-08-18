@@ -3,7 +3,7 @@
   <div class="card-body">
     <div class="h3">
       <?php if($steam_link != null) {
-        $json = file_get_contents(sprintf("http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=3B30DE69513DAE0E4219F25A10E06CC7&steamids=%s", $steam_link));
+        $json = file_get_contents(sprintf("http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=%s&steamids=%s", $steam_api_key, $steam_link));
         $parsed = json_decode($json);
         $parsed_info = $parsed->response->players[0];
         $avatar = $parsed_info->avatarfull;

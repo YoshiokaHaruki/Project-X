@@ -1,5 +1,6 @@
 <?php
-// $achiev_data = loadAchiev($_GET['id']);
+$achiev_data = loadAchiev($_GET['id']);
+print_r($achiev_data);
 ?>
 <div class="card">
   <div class="card-header">Достижения</div>
